@@ -1,0 +1,12 @@
+Task 2 explaination:
+
+Task 2 uses the same Breadth First Search algorithm as Task 1.The flow of the program is the same as Task 1. 
+But, in Task2 i fetch only those URLs which have the keyword "rain" present in the 'href' or 'anchortext' of the anchor tag.
+The approach used to match the text with the keyword is by using Regular Expressions.
+The formatted string is in the form of : "^%s|[ _]%s[ _]| %s$"%(key,key,key)
+
+The above formatted string matches all those words with begin with "rain" or "rain_" , end with " rain" or "_rain" and have "rain" by itself.
+
+This formatted string is passed to the "re.compile()" function which compiles the regular expression.
+
+This compiled regex is used to findall those anchor tags which have the keyword in the 'href' or 'text' attribute. When it matches either of it, that URL is added to the file.

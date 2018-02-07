@@ -1,0 +1,19 @@
+Task 1 explaination:
+
+I have used the Breadth First Search Algorithm to implement web crawling.
+
+The seed URL is crawled at depth 1 and fetches the child URLs based on the filters, ignoring:
+-> the administrative URLs
+-> Left and Right navigation links
+-> External links
+-> References on each page
+-> URLs pointing to the same page
+-> Duplicate URLs
+
+The 1st child node at depth 2 is crawled next and then the 2nd child node at depth 3 is crawled. This continues....
+
+The same filters are applied to crawling at each depth.
+
+The crawling stops if it crawls 1000 URLs or if it has crawled till depth 6.
+
+The URLs are written to a file.
